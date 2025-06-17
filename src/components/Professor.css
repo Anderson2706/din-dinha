@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e6f0fa; /* fundo azul clarinho */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  background-color: #ffffff; /* branco puro */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 60, 150, 0.15); /* sombra azulada */
+  width: 400px;
+  text-align: center;
+  border-top: 5px solid #004aad; /* azul forte no topo */
+}
+
+.logo-ceara {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin-bottom: 24px;
+  color: #003974; /* azul escuro */
+  font-weight: bold;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.campo {
+  text-align: left;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #33568c; /* azul médio */
+}
+
+.campo input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #b0c4de; /* borda azul clara */
+  background-color: #f8fbff; /* branco azulado */
+  color: #003974; /* texto azul escuro */
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.campo input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.campo input[type="number"]::-webkit-outer-spin-button,
+.campo input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.campo input:focus {
+  border: 2px solid #004aad; /* azul mais forte no foco */
+  outline: none;
+  background-color: #ffffff;
+}
+
+.botao {
+  background-color: #004aad; /* azul forte */
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+  background-color: #003374; /* azul mais escuro no hover */
+}
+
+.erro {
+  color: #d93025; /* vermelho padrão de erro */
+  font-weight: 600;
+  margin-top: -10px;
+}

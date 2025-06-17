@@ -1,0 +1,207 @@
+/* Fundo geral neutro */
+body {
+  background-color: #f2f2f2;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1b1b1b;
+}
+
+/* Detalhe institucional no topo */
+.detalhe-topo {
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(
+    to right,
+    #155b2f 0%,
+    #00254d 30%,
+    #ffcc00 60%,
+    #e37300 100%
+  );
+  clip-path: polygon(0 50%, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* Containers centrais */
+.login-container,
+.ocorrencia-container {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  margin: 80px auto;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-top: 6px solid #00254d;
+  transition: transform 0.2s;
+}
+
+.login-container:hover,
+.ocorrencia-container:hover {
+  transform: scale(1.01);
+}
+
+/* Títulos */
+.login-container h1,
+.ocorrencia-container h1 {
+  text-align: center;
+  color: #00254d;
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+}
+
+/* Campos de entrada */
+.campo {
+  margin-bottom: 18px;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #fbfbfb;
+  color: #222;
+  font-size: 15px;
+  transition: border 0.3s ease;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  border: 2px solid #155b2f;
+  outline: none;
+  background-color: #fff;
+}
+
+/* Remoção de setas nos inputs tipo número */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  appearance: textfield;
+}
+
+/* Botão principal */
+.botao {
+  width: 100%;
+  background-color: #e37300;
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+  background-color: #cc6600;
+}
+
+/* Mensagem de erro */
+.erro {
+  color: red;
+  text-align: center;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+/* Info do professor */
+.professor-info {
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #155b2f;
+}
+
+/* Layout principal com formulário e lista */
+.ocorrencia-page {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 2rem;
+  box-sizing: border-box;
+  height: 100vh;
+  overflow: hidden;
+  gap: 2rem;
+}
+
+.ocorrencia-container {
+  flex: 1;
+  max-width: 45%;
+}
+
+/* Tabela com scroll fixo à direita */
+.ocorrencias-lista {
+  background-color: #ffffff;
+  color: #1b1b1b;
+  padding: 24px 32px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  border-top: 6px solid #00254d;
+  width: 50%;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+  position: sticky;
+  right: 0;
+  top: 2rem;
+}
+
+/* Tabela */
+.ocorrencias-lista table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  margin-top: 1rem;
+  font-size: 15px;
+}
+
+.ocorrencias-lista th,
+.ocorrencias-lista td {
+  padding: 12px 16px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  text-align: left;
+  vertical-align: top;
+}
+
+.ocorrencias-lista th {
+  background-color: #155b2f;
+  color: #ffffff;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-radius: 4px 4px 0 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .ocorrencia-page {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    overflow: auto;
+    height: auto;
+  }
+
+  .login-container,
+  .ocorrencia-container,
+  .ocorrencias-lista {
+    width: 90%;
+    max-width: 100%;
+    margin: 1rem auto;
+    position: static;
+  }
+
+  .ocorrencias-lista {
+    max-height: 60vh;
+  }
+}
